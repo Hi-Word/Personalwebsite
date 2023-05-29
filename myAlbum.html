@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+    #map{
+      width: 100%;
+      height: 500px;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    
+    <script
+      type="text/javascript"
+      src="https://api.map.baidu.com/api?v=2.0&amp;ak=Gq2gx3BwIwephyzjgKm7yOEapKekwkrk"
+    ></script>
+    <script>
+      /* Act on the event */
+      $('#mark').show();
+      var map = new BMap.Map('map');
+      var point = new BMap.Point(108.615889,21.862453);// 120.73717 经度  //31.25795 纬度
+      map.centerAndZoom(point, 15);
+      map.enableScrollWheelZoom(true); // 开启鼠标滚轮缩放
+      var marker = new BMap.Marker(point); // 创建标注
+      map.addOverlay(marker); // 将标注添加到地图中
+      marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+      var opts = {
+        position: point, // 指定文本标注所在的地理位置
+        offset: new BMap.Size(20, -30), //设置文本偏移量
+      };
+      var label = new BMap.Label('苏州同城大厦', opts); // 创建文本标注对象
+      label.setStyle({
+        color: '#006abe',
+        fontSize: '16px',
+        height: 'auto',
+        border: '1px solid #fff',
+        padding: '12px 12px',
+        fontWeight: 'bold',
+        lineHeight: '16px',
+        fontFamily: 'SourceHanSansCN-Regular',
+      });
+      map.addOverlay(label);
+      window.setTimeout(function () {
+        map.panTo(new BMap.Point(108.615889,21.862453));
+      }, 2000);
+    </script>
+  </body>
+</html>

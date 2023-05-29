@@ -1,0 +1,120 @@
+*{margin: 0;padding: 0;}
+a{text-decoration: none;}
+ul,li{list-style: none;}
+body{
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.timeline{
+    width: 100%;
+    max-width: 1920px;
+    /* height: 90px; */
+    margin: 0 auto;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+.buttons{
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    border: 0 solid;
+    background-color: rgb(241, 64, 64);
+    display: block;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    margin-right: 40px;
+}
+.buttonsOver{
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    border: 0 solid;
+    background-color:#f89c9c;
+    display: block;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    font-size: 22px;
+    color: #575757;
+    margin-right: 40px;
+}
+.arrow{
+    margin: 0 auto;
+    height: 50px;
+    margin-top: 30px;
+}
+.arrow hr{
+    margin: 0 auto;
+    border:0.05rem solid #f57070;
+}
+.event{
+    margin: 20px auto;
+    width: 1000px;
+    overflow: hidden;       /*溢出后隐藏*/
+}
+.event img{
+    float: left;
+    width: 360px;
+    margin-right: 80px;
+
+}
+.event p{
+    float: left;
+    width: 500px;
+    color: #575757;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px;
+}
+#eventHandling{
+    margin: 20px auto;
+    width: 1000px;
+    overflow: hidden;       /*溢出后隐藏*/
+}
+#eventHandling p{
+    float: left;
+    width: 500px;
+    color: #575757;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    margin-right: 80px;
+}
+#eventHandling img{
+    float: left;
+    width: 360px;
+}
+.case{
+    width: 300px;
+    text-align: center;
+    margin: 20px auto;
+}
+.casebutton{
+    width: 130px;
+    height: 50px;
+    background-color: #ffcc7a;
+    color: #f35548;
+    border: 0 solid;
+    outline: none;
+    font-size: 22px;
+}
+.caseover{
+    width: 130px;
+    height: 50px;
+    background-color: #f14040;
+    color: #fba769;
+    border: 0 solid;
+    outline: none;
+    font-size: 22px;
+}
+.case div{
+    float: left;
+}
